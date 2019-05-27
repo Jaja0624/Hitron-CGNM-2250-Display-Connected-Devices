@@ -7,6 +7,8 @@ Yes, there is likely a much better method than having to open a web browser.
 
 ## Requirements
 
+Python
+
 Selenium + Chromedriver
 ```
 pip install selenium
@@ -14,6 +16,14 @@ pip install selenium
 
 ```
 pip install chromedriver
+```
+
+## Running
+
+First update "myUsername" and "myPassword" with your...
+
+```
+python devices.py
 ```
 
 ### Working as of software version: 4.5.11.9.1
