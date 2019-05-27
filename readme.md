@@ -3,7 +3,7 @@
 Uses Selenium Webdriver to login to your router and display connected devices. 
 Easily modified for other purposes.
 
-Yes, there is likely a much better method than having to open a web browser.
+Runs in the background. Takes approx 10 seconds to get data.
 
 ## Requirements
 
@@ -20,7 +20,11 @@ pip install chromedriver
 
 ## Running
 
-First update "myUsername" and "myPassword" with your...
+Update "myUsername" and "myPassword" local variables with your...
+
+Update "chromedriverPath" with the path to your chromedriver.exe
+
+To run from terminal:
 
 ```
 python devices.py

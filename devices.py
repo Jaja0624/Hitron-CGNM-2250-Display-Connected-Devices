@@ -2,15 +2,23 @@ from selenium import webdriver
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.chrome.options import Options
 import time
 
 # Your router login credentials
 myUsername = ""
 myPassword = ""
+# modem/router ip
 loginUrl = 'http://192.168.0.1/login.htm'
 
-# initialize selenium webdriver 
-driver = webdriver.Chrome()
+# path to your chromedriver executable
+chromedriverPath = 'C:\Windows\chromedriver.exe'
+
+options = Options()
+options.add_argument("--headless") 
+
+# initialize selenium chromedriver
+driver = webdriver.Chrome(options=options, executable_path=chromedriverPath)
 
 # opens chrome browser to "loginUrl"
 driver.get(loginUrl)
