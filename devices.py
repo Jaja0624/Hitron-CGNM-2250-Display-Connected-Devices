@@ -10,9 +10,9 @@ myPassword = ""
 loginUrl = 'http://192.168.0.1/login.htm'
 
 # initialize selenium webdriver 
-# opens chrome browser to "loginUrl"
 driver = webdriver.Chrome()
 
+# opens chrome browser to "loginUrl"
 driver.get(loginUrl)
 
 wait = WebDriverWait(driver, 15)
@@ -21,11 +21,9 @@ username = wait.until(EC.visibility_of_element_located((By.NAME, "user[login]"))
 username.clear()
 username.send_keys(myUsername)
 
-
 password = wait.until(EC.visibility_of_element_located((By.NAME, "user[password]")))
 password.clear()
 password.send_keys(myPassword)
-
 
 loginBtn = wait.until(EC.visibility_of_element_located((By.ID, "btnLogin")))
 loginBtn.click()
@@ -43,9 +41,10 @@ showBtn.click()
 
 devicesTable = wait.until(EC.visibility_of_element_located((By.ID, "tblConnectDevice")))
 time.sleep(4) # necessary to wait for the table to load completely (i think)
+
 for row in devicesTable.find_elements_by_xpath('./tbody/tr'):
-    col = row.find_elements(By.TAG_NAME, "td")
-    print(col[0].text)
+    device = row.find_elements(By.TAG_NAME, "td")
+    print(device[0].text) # host name
 
 # close all browsers
 driver.quit()
