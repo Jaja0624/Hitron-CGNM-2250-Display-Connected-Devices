@@ -12,9 +12,12 @@ Python
 
 Selenium + Chromedriver
 ```
-pip install selenium chromedriver
+pip install selenium 
 ```
-
+Download chromedriver here:
+```
+http://chromedriver.chromium.org/
+```
 
 ## Running
 
