@@ -1,22 +1,20 @@
 # Display connected devices for Hitron CGNM-2250 Router (Shaw)
 
 Uses Selenium Webdriver to login to your router and display connected devices. 
+
 Easily modified for other purposes.
 
 Runs in the background. Takes approx 10 seconds to get data.
 
-## Requirements
+## Requirements + Dependencies
 
 Python
 
 Selenium + Chromedriver
 ```
-pip install selenium
+pip install selenium chromedriver
 ```
 
-```
-pip install chromedriver
-```
 
 ## Running
 
@@ -32,4 +30,4 @@ python devices.py
 
 ### Working as of software version: 4.5.11.9.1
 
-### P.S. The modem has a limit on the number of times you can login... "30 per session"
+### P.S. The modem has a limit on the number of times you can login per hour (30)
