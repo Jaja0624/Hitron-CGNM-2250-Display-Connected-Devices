@@ -16,7 +16,7 @@ pip install selenium
 ```
 Download chromedriver here:
 ```
-http://chromedriver.chromium.org/
+(http://chromedriver.chromium.org/)
 ```
 
 ## Running
